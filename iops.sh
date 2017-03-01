@@ -6,7 +6,7 @@ apt-get install fio -y
 
 
 cat <<EOT >> /root/fio.sh
-fio --directory=/root/ --direct=1 --rw=\$1 --bs=\$2 --size=10M --numjobs=1 --iodepth=16 --runtime=60 --group_reporting --name=testIOPslan1 --output=\$3
+fio --directory=/root/ --direct=1 --rw=\$1 --bs=\$2 --size=1G --numjobs=1 --iodepth=16 --runtime=60 --group_reporting --name=testIOPslan1 --output=\$3
 echo "##################xoa file###########"
 rm /root/testIOP*
 echo "################Xoa cache#######"
