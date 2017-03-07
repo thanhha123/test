@@ -22,17 +22,17 @@ cat <<EOT >> /root/testiops.sh
 ./fio.sh randread 4k dnn4k
 ./fio.sh randrw 4k mixdg4k
 
-./fio.sh write 1M gtt1M
-./fio.sh read 1M dtt1M
-./fio.sh randwrite 1M gnn1M
-./fio.sh randread 1M dnn1M
-./fio.sh randrw 1M mixdg1M
+#./fio.sh write 1M gtt1M
+#./fio.sh read 1M dtt1M
+#./fio.sh randwrite 1M gnn1M
+#./fio.sh randread 1M dnn1M
+#./fio.sh randrw 1M mixdg1M
 
-./fio.sh write 4M gtt4M
-./fio.sh read 4M dtt4M
-./fio.sh randwrite 4M gnn4M
-./fio.sh randread 4M dnn4M
-./fio.sh randrw 4M mixdg4M
+#./fio.sh write 4M gtt4M
+#./fio.sh read 4M dtt4M
+#./fio.sh randwrite 4M gnn4M
+#./fio.sh randread 4M dnn4M
+#./fio.sh randrw 4M mixdg4M
 python /root/test2.py
 EOT
 
