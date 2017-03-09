@@ -1,6 +1,3 @@
-echo "**********update********"
-apt-get update -y
-
 echo "************Install fio***********"
 apt-get install fio -y
 
