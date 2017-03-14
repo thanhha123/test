@@ -2,6 +2,9 @@ import re
 from pexpect import pxssh
 import getpass
 username = 'root'
+import os
+host = os.system('hostname')
+
 
 
 docfile_gtt4k = open("/root/gtt4k").readlines()
@@ -46,14 +49,14 @@ for i in range(0,len(docfile_mixdg4k)):
 print listiops
 tong = int(int(listiops[4])+int(listiops[5]))
 
-ketqua = "%s %s %s %s %s %s %d " % (listiops[0], listiops[1], listiops[2], listiops[3], listiops[4], listiops[5],tong)
+ketqua = "%s %s %s %s %s %s %d |" % (listiops[0], listiops[1], listiops[2], listiops[3], listiops[4], listiops[5],tong)
 print ketqua
 try:
-    j = "123.30.157.193"
+    j = "172.16.2.7"
     print "*******************Gui ket qua ve " + j + " *************"
     s = pxssh.pxssh()
     s.login (j, username, password)
-    s.sendline ('echo %s >> ketqua_iops.txt' % ketqua)
+    s.sendline ('echo %s >> ketqua_iops%s.txt' % (ketqua,host))
     s.prompt()
     print s.before
     s.logout()
