@@ -2,8 +2,9 @@ import re
 from pexpect import pxssh
 import getpass
 username = 'root'
-import os
-host = os.system('hostname')
+import subprocess
+host = subprocess.check_output("hostname", shell=True)
+password = 'Iops1T@!d3m0'
 
 
 
@@ -56,7 +57,7 @@ try:
     print "*******************Gui ket qua ve " + j + " *************"
     s = pxssh.pxssh()
     s.login (j, username, password)
-    s.sendline ('echo %s >> ketqua_iops%s.txt' % (ketqua,host))
+    s.sendline ('echo "%s" >> %s' % (ketqua,host))
     s.prompt()
     print s.before
     s.logout()
