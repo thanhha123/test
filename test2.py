@@ -4,7 +4,7 @@ import getpass
 username = 'root'
 import subprocess
 host = subprocess.check_output("hostname", shell=True)
-password = 'Iops1T@!d3m0'
+
 
 
 
