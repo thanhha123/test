@@ -3,7 +3,7 @@ apt-get install fio -y
 
 
 cat <<EOT >> /root/fio.sh
-fio --directory=/root/ --direct=1 --rw=\$1 --bs=\$2 --size=2G --numjobs=3 --iodepth=64 --runtime=60 --group_reporting --name=testIOPslan1 --output=\$3
+fio --directory=/root/ --direct=1 --rw=\$1 --bs=\$2 --size=1G --numjobs=3 --iodepth=64 --runtime=60 --group_reporting --name=testIOPslan1 --output=\$3
 echo "##################xoa file###########"
 rm /root/testIOP*
 echo "################Xoa cache#######"
@@ -13,10 +13,10 @@ EOT
 chmod +x fio.sh
 
 cat <<EOT >> /root/testiops.sh
-#./fio.sh write 4k gtt4k
-#./fio.sh read 4k dtt4k
-#./fio.sh randwrite 4k gnn4k
-#./fio.sh randread 4k dnn4k
+./fio.sh write 4k gtt4k
+./fio.sh read 4k dtt4k
+./fio.sh randwrite 4k gnn4k
+./fio.sh randread 4k dnn4k
 ./fio.sh randrw 4k mixdg4k
 
 #./fio.sh write 1M gtt1M
