@@ -6,8 +6,6 @@ import subprocess
 host = subprocess.check_output("hostname", shell=True)
 
 
-
-docfile_gtt4k = open("/root/gtt4k").readlines()
 tukhoa1 = "iops"
 listiops = []
 
