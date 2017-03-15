@@ -6,11 +6,13 @@ import subprocess
 host = subprocess.check_output("hostname", shell=True)
 
 
-'''
+
 docfile_gtt4k = open("/root/gtt4k").readlines()
 tukhoa1 = "iops"
 listiops = []
 
+'''
+docfile_gtt4k = open("/root/gtt4k").readlines()
 for i in range(0,len(docfile_gtt4k)):
     if tukhoa1 in docfile_gtt4k[i]:
         iopsResult = re.search('iops=(.+?),',docfile_gtt4k[i] )
