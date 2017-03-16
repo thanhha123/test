@@ -52,7 +52,7 @@ tong = int(int(listiops[0])+int(listiops[1]))
 ketqua = "%s %s %d |" % (listiops[0], listiops[1],tong)
 print ketqua
 try:
-    j = "172.16.2.7"
+    j = "172.16.2.110"
     print "*******************Gui ket qua ve " + j + " *************"
     s = pxssh.pxssh()
     s.login (j, username, password)
