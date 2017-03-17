@@ -58,7 +58,7 @@ print listiops
 ketqua = "%s |" % (listiops[0])
 print ketqua
 try:
-    j = "172.16.2.110"
+    j = "172.16.2.111"
     print "*******************Gui ket qua ve " + j + " *************"
     s = pxssh.pxssh()
     s.login (j, username, password)
