@@ -57,7 +57,7 @@ try:
     print "*******************Gui ket qua ve " + j + " *************"
     s = pxssh.pxssh()
     s.login (j, username, password)
-    s.sendline ('echo "%s" >> %s' % (ketqua,host))
+    s.sendline ('echo "%s" > %s' % (ketqua,host))
     s.prompt()
     print s.before
     s.logout()
