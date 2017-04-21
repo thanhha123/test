@@ -30,6 +30,7 @@ cat <<EOT >> /root/testiops.sh
 #./fio.sh randwrite 4M gnn4M
 #./fio.sh randread 4M dnn4M
 #./fio.sh randrw 4M mixdg4M
+python test2.py
 EOT
 
 
